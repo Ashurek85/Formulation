@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{22D05E5E-6DB6-49DD-BBFA-2921F646056F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F8874046-C690-46C2-B022-622236EB270A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D05E5E-6DB6-49DD-BBFA-2921F646056F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D05E5E-6DB6-49DD-BBFA-2921F646056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D05E5E-6DB6-49DD-BBFA-2921F646056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D05E5E-6DB6-49DD-BBFA-2921F646056F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8874046-C690-46C2-B022-622236EB270A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8874046-C690-46C2-B022-622236EB270A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8874046-C690-46C2-B022-622236EB270A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8874046-C690-46C2-B022-622236EB270A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36C0DC9E-DA55-4D17-9E89-0146646E6B84}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ashurek85.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Core\\Core.csproj
+		SccProjectName1 = Core
+		SccLocalPath1 = Core
+		SccProjectUniqueName2 = Test\\Test.csproj
+		SccProjectName2 = Test
+		SccLocalPath2 = Test
+	EndGlobalSection
+EndGlobal
