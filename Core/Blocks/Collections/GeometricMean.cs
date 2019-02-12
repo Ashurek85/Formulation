@@ -12,9 +12,9 @@ using System.Reflection;
 
 namespace Core.Blocks.Collections
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class GeometricMean<TArigmeticType> : ProjectionBlock<TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType, new()
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class GeometricMean<TArithmeticType> : ProjectionBlock<TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType, new()
     {
         public GeometricMean()
         {
@@ -64,7 +64,7 @@ namespace Core.Blocks.Collections
                 geoExpression = Expression.Call(geoMethod, paramExpression);
             }
 
-            Type internalType = new TArigmeticType().InternalType;
+            Type internalType = new TArithmeticType().InternalType;
             if (geoExpression.Type != internalType)
                 return Expression.Convert(geoExpression, internalType);
 

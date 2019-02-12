@@ -99,7 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeDefinitions\BaseType.cs" />
     <Compile Include="TypeDefinitions\BoolType.cs" />
-    <Compile Include="TypeDefinitions\GenericCapabilities\IArigmeticType.cs" />
+    <Compile Include="TypeDefinitions\GenericCapabilities\IArithmeticType.cs" />
     <Compile Include="TypeDefinitions\NumericType.cs" />
     <Compile Include="TypeDefinitions\PrimitiveType.cs" />
     <Compile Include="TypeDefinitions\StringType.cs" />

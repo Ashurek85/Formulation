@@ -2,7 +2,7 @@
 
 namespace Core.TypeDefinitions
 {
-    public class NumericType : BaseType<double>, IArigmeticType
+    public class NumericType : BaseType<double>, IArithmeticType
     {
     }
 }

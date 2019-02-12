@@ -11,9 +11,9 @@ using Core.Introspection.Attributes;
 
 namespace Core.Blocks.Collections
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class Sum<TArigmeticType> : ProjectionBlock<TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType, new()
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class Sum<TArithmeticType> : ProjectionBlock<TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType, new()
     {
 
         public Sum()
@@ -58,7 +58,7 @@ namespace Core.Blocks.Collections
                 sumExpression = Expression.Call(sumMethod, paramExpression);
             }
 
-            Type internalType = new TArigmeticType().InternalType;
+            Type internalType = new TArithmeticType().InternalType;
             if (sumExpression.Type != internalType)
                 return Expression.Convert(sumExpression, internalType);
 

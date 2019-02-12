@@ -8,15 +8,15 @@ using System.Linq.Expressions;
 
 namespace Core.Blocks.Operators
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class Subtract<TArigmeticType> : Binary<TArigmeticType, TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class Subtract<TArithmeticType> : Binary<TArithmeticType, TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType
     {
         public Subtract()
         {
         }
 
-        public Subtract(Block<TArigmeticType> leftExpression, Block<TArigmeticType> rightExpression)
+        public Subtract(Block<TArithmeticType> leftExpression, Block<TArithmeticType> rightExpression)
             : base(leftExpression, rightExpression)
         {
         }

@@ -11,9 +11,9 @@ using System.Reflection;
 
 namespace Core.Blocks.Collections
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class Average<TArigmeticType> : ProjectionBlock<TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType, new()
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class Average<TArithmeticType> : ProjectionBlock<TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType, new()
     {
         public Average()
         {
@@ -60,7 +60,7 @@ namespace Core.Blocks.Collections
                 avgExpression = Expression.Call(avgMethod, paramExpression);
             }
 
-            Type internalType = new TArigmeticType().InternalType;
+            Type internalType = new TArithmeticType().InternalType;
             if (avgExpression.Type != internalType)
                 return Expression.Convert(avgExpression, internalType);
 

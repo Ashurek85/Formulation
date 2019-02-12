@@ -11,9 +11,9 @@ using Core.Introspection.Attributes;
 
 namespace Core.Blocks.Collections
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class Max<TArigmeticType> : ProjectionBlock<TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType, new()
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class Max<TArithmeticType> : ProjectionBlock<TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType, new()
     {
 
         public Max()
@@ -58,7 +58,7 @@ namespace Core.Blocks.Collections
                 maxExpression = Expression.Call(maxMethod, paramExpression);
             }
 
-            Type internalType = new TArigmeticType().InternalType;
+            Type internalType = new TArithmeticType().InternalType;
             if (maxExpression.Type != internalType)
                 return Expression.Convert(maxExpression, internalType);                   
 

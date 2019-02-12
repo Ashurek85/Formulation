@@ -1,6 +1,6 @@
 ﻿namespace Core.TypeDefinitions.GenericCapabilities
 {
-    public interface IArigmeticType
+    public interface IArithmeticType
     {
     }
 }

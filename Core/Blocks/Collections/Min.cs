@@ -11,9 +11,9 @@ using Core.Introspection.Attributes;
 
 namespace Core.Blocks.Collections
 {
-    [SerializationValues(nameof(TArigmeticType), new Type[] { typeof(IArigmeticType) })]
-    public class Min<TArigmeticType> : ProjectionBlock<TArigmeticType>
-        where TArigmeticType : PrimitiveType, IArigmeticType, new()
+    [SerializationValues(nameof(TArithmeticType), new Type[] { typeof(IArithmeticType) })]
+    public class Min<TArithmeticType> : ProjectionBlock<TArithmeticType>
+        where TArithmeticType : PrimitiveType, IArithmeticType, new()
     {
 
         public Min()
@@ -58,7 +58,7 @@ namespace Core.Blocks.Collections
                 minExpression = Expression.Call(maxMethod, paramExpression);
             }
 
-            Type internalType = new TArigmeticType().InternalType;
+            Type internalType = new TArithmeticType().InternalType;
             if (minExpression.Type != internalType)
                 return Expression.Convert(minExpression, internalType);
 
